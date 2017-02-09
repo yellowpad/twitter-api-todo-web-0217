@@ -19,8 +19,6 @@ class TwitterApi
   end
 
   def most_recent_friend
-    #client.followers("gem")
-    #client.followers(2448471445)
     client.friends.first
     #find the twitter gem method that retrieves a user's friends and grab the most recent friend
   end
@@ -32,8 +30,6 @@ class TwitterApi
 
   def find_followers_for(username)
     #find the twitter gem method that returns the follows of a given user
-    #client.followers("gem")
-    #client.followers(2448471445)
     client.followers(username).take(10)
   end
 
